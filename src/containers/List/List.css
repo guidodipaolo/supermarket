@@ -1,0 +1,20 @@
+
+.list-container {
+
+}
+
+.list-container h2 {
+  margin: 0;
+  font-size: 33px;
+}
+
+.list-container h5 {
+  margin-top: 10px;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.list-container .empty-list {
+  font-style: italic;
+  color: #999;
+}
