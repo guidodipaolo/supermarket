@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Item.css";
 
+import trash from '../../assets/trash.svg';
+
 class Item extends Component {
 
   render() {
@@ -8,7 +10,9 @@ class Item extends Component {
     return (
       <div className="item-box">
         <span className="title">{name}</span>
-        <button onClick={()=>deleteItem(index)}>Delete</button>
+        <button onClick={()=>deleteItem(index)}>
+          <img src={trash} alt={'Delete' + name} />
+        </button>
       </div>
     );
   }

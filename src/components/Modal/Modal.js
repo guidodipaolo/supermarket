@@ -28,7 +28,7 @@ class Modal extends Component {
 
   render() {
     const { txtValue } = this.state;
-    const { add, cancel, show } = this.props;
+    const { cancel, show } = this.props;
     const showHideClassName = show ? "modal-display-block" : "modal-display-none";
     return (
       <div className={showHideClassName}>
@@ -36,11 +36,17 @@ class Modal extends Component {
         <div className="modal-box">
           <h3>Add Item</h3>
           <div className="">
-            <input type="text" value={txtValue} onChange={this.onPress} onKeyPress={this._handleKeyPress} />
+            <input
+              id="ref-input"
+              type="text"
+              focus="true"
+              value={txtValue}
+              onChange={this.onPress}
+              onKeyPress={this._handleKeyPress} />
           </div>
           <div className="action-box">
-            <button onClick={()=>cancel()}>Cancel</button>
-            <button disabled={txtValue === ''} onClick={this._handleAddItem}>Add</button>
+            <button className="outline" onClick={()=>cancel()}>Cancel</button>
+            <button className={`fill ${txtValue === '' ? 'disabled' : ''}`} disabled={txtValue === ''} onClick={this._handleAddItem}>Add</button>
           </div>
         </div>
       </div>

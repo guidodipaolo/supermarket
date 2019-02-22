@@ -1,20 +1,30 @@
-
-.list-container {
-
+.layout {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-.list-container h2 {
+.layout .list-container {
+  width: 40%;
+}
+
+.layout .list-container .list-header {
+  text-align: center;
+  width: 100%;
+}
+
+.layout .list-container .list-header h2 {
   margin: 0;
   font-size: 33px;
 }
 
-.list-container h5 {
+.layout .list-container .list-header h5 {
   margin-top: 10px;
   color: #999;
   text-transform: uppercase;
 }
 
-.list-container .empty-list {
+.layout .list-container .empty-list {
   font-style: italic;
   color: #999;
 }

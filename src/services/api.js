@@ -3,21 +3,26 @@ import apisauce from 'apisauce'
 // define the api
 const create = () => {
   const api = apisauce.create({
-    baseURL: `https://www.test.com/api/`,
+    baseURL: '',
   })
 
   // Orders
   const getItems = () => {
-    let items = [
-      {name:'Beer'},
-      {name:'Cofee'},
-      {name:'More beer'},
-    ]
-    return items;
+    return api.get();
+  }
+
+  const addItem = () => {
+    return api.put();
+  }
+
+  const deleteItem = () => {
+    return api.delete();
   }
 
   return {
     getItems,
+    addItem,
+    deleteItem,
   };
 };
 
