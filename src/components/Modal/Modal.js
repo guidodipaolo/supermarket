@@ -21,7 +21,7 @@ class Modal extends Component {
   }
 
   _handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && this.state.txtValue !== '') {
       this._handleAddItem();
     }
   }
